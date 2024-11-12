@@ -1,6 +1,6 @@
 {
     "thresholds" : {
-        "large_order": 100.00
+        "large_order": 10.00
     },
     "transforms" : {
         "product_name": {
