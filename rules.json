@@ -5,7 +5,7 @@
     "transforms" : {
         "product_name": {
             "before" : "Cargo Jeans",
-            "after" : "Combat Pants"
+            "after" : "Combat Trousers"
         }
     }
 }
