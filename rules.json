@@ -1,11 +1,11 @@
 {
     "thresholds" : {
-        "large_order": 5.00
+        "large_order": 4.00
     },
     "transforms" : {
         "product_name": {
             "before" : "Cargo Jeans",
-            "after" : "Combat Pants"
+            "after" : "Combat Pants/Trousers"
         }
     }
 }
