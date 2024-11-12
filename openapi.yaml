@@ -1,0 +1,50 @@
+openapi: 3.0.0
+info:
+  title: Rules API
+  description: API to retrieve rules configurations, including thresholds and transforms.
+  version: 1.0.0
+
+paths:
+  /rules.json:
+    get:
+      summary: Retrieve rules configuration
+      description: Fetches the configuration for thresholds and transforms.
+      parameters:
+        - in: query
+          name: ignored
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response with rules configuration.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  thresholds:
+                    type: object
+                    properties:
+                      large_order:
+                        type: number
+                        format: float
+                        example: 50.0
+                  transforms:
+                    type: object
+                    properties:
+                      product_name:
+                        type: object
+                        properties:
+                          before:
+                            type: string
+                            example: "regexpbefore"
+                          after:
+                            type: string
+                            example: "after"
+
+servers:
+- url: https://raw.githubusercontent.com/dalelane/demo-rules-api/refs/heads/main/
+security: []
+components:
+  securitySchemes: {}
